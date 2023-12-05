@@ -12,7 +12,8 @@ node_modules
 dist
 dist-ssr
 *.local
-
+system-commandline-sentinel-files
+system-commandline-sentinel-files/*
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

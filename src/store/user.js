@@ -5,29 +5,6 @@ import {
 } from "common/js/commonMethods"
 
 var dl = new deal("user");
-// function getUserType() {
-//     const uType = getUrlParam("u_type");
-//     switch(uType) {
-//         case "cfcd208495d565ef66e7dff9f98764da":
-//             return getIsWxClient() ? 1 : 0;
-//         case "c4ca4238a0b923820dcc509a6f75849b":
-//             return getIsWxClient() ? 1 : 0;
-//         case "c81e728d9d4c2f636f067f89cc14862c":
-//             return 2;
-//         case "eccbc87e4b5ce2fe28308fd9f2a7baf3":
-//             return 3;
-//         default:
-//             return undefined;
-//     }
-// }
-// const t = getUserType();
-// const type = t != undefined ? t : dl.parse('type') || (getIsWxClient() ? 1 : 0);
-// // alert(type)
-// dl.setItem({
-//     type: type
-// })
-// alert(type)
-// console.log(t,dl.parse('type'),getIsWxClient() ? 1 : 0)
 const state = {
     id: dl.parse("id") !== undefined ? dl.parse("id") : null, //微信端用户id
     openId: dl.parse("openId") || null, // 微信公众号，用户openid
@@ -50,8 +27,6 @@ const state = {
     loginFail: dl.parse("loginFail") || false, // 是否登录失败（登录接口走了catch回调）
     logined: dl.parse('logined') || false,
     token:  getUrlParam("token") || dl.parse('token') || null,
-    "Accept-Language": getUrlParam("Accept-Language") || dl.parse('Accept-Language') || null,
-    // centerCode: dl.parse('centerCode') || null, //所属中心的地区码
     
 }
 
